@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">CarWasher</string>
+    <!--splash string-->
+    <string name="splash_image_desc">image view for splash sctivity</string>
+
+    <!--signing string-->
+    <string name="login_image_desc">image view for sign in</string>
+
+    <!--requests string-->
+    <string name="accept_text">Accept</string>
+    <string name="reject_text">Reject</string>
+    <string name="username_text">username</string>
+    <string name="request_profile_desc">image to show requester\'s profile</string>
+    <string name="imageview_descr">image view for the requester</string>
+    <string name="requester_name">requester</string>
+    <string name="request_date">request date</string>
+    <string name="done_dialog_button_descr">image view for dialog confirm</string>
+    <string name="cancel_dialog_button_desc">image view for dialog cancellation</string>
+    <string name="dialog_text">Are you sure you want to cancel ?</string>
+    <string name="dialog_title">CONFIRMATION</string>
+    <string name="cancel_dialog_iv_desc">image view to cancel dialog</string>
+    <string name="request_address_text">CURRENT ADDRESS</string>
+    <string name="confirm_request_text">confirm request</string>
+    <string name="request_time_text">request time:</string>
+    <string name="time_text">time</string>
+    <string name="location_desc">set your location so we can locate you at the right spot and find car washer available</string>
+    <string name="set_automatically_text">set automatically</string>
+    <string name="set_manually_text">set manually</string>
+    <string name="where_are_you_text">Where are you ?</string>
+    <string name="item_specification_text">specification</string>
+    <string name="request_date_text">request date:</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="confirm_password_text">Confirm password</string>
+    <string name="password_text">Password</string>
+    <string name="login_text">Login</string>
+    <string name="email_text">Email</string>
+    <string name="register_to_continue_text">Register to continue</string>
+    <string name="register_text">Register</string>
+    <string name="forgot_password_text">forgot password</string>
+    <string name="remember_me_text">Remember me</string>
+    <string name="login_to_continue_text">Login to continue</string>
+    <string name="new_user_text">New User?</string>
+    <string name="drawer_cancelled_text">Cancelled</string>
+    <string name="drawer_completed_text">Completed</string>
+    <string name="drawer_logout_text">Logout</string>
+    <string name="drawer_home_text">Home</string>
+    <string name="cancellation_time_text">cancellation time:</string>
+    <string name="from_text">from</string>
+    <string name="to_text">to</string>
+    <string name="destination_text">Destination</string>
+    <string name="button_complete_text">complete</string>
+    <string name="completed_time_text">Completed time:</string>
+    <string name="firstname_text">Firstname</string>
+    <string name="lastname_text">Lastname</string>
+    <string name="update_button_text">update</string>
+    <string name="show_interest_text">show interest</string>
+    <string name="place_interest_text">place interest</string>
+
+    <string name="API_KEY">AIzaSyCWAlygRFNEV7hvvoCq4ooOswLYFYM53mE</string>
+</resources>

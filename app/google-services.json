@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "564937678846",
+    "firebase_url": "https://findcarwash-68602-default-rtdb.firebaseio.com",
+    "project_id": "findcarwash-68602",
+    "storage_bucket": "findcarwash-68602.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564937678846:android:307a7a91a2e11d2819aaaf",
+        "android_client_info": {
+          "package_name": "com.example.carwasher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564937678846-746coa1c1amqp8kqo8754q4f0ls7otep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsBy8nmj1iH9hU4A1JFJAbOORldCl3sPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564937678846-746coa1c1amqp8kqo8754q4f0ls7otep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564937678846:android:d4647de23feb5e1719aaaf",
+        "android_client_info": {
+          "package_name": "com.example.findcarwash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564937678846-746coa1c1amqp8kqo8754q4f0ls7otep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsBy8nmj1iH9hU4A1JFJAbOORldCl3sPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564937678846-746coa1c1amqp8kqo8754q4f0ls7otep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RequestsDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/details_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+
+            <Toolbar
+                android:id="@+id/details_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--requester's details-->
+    <RelativeLayout
+        android:id="@+id/customer_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:padding="15dp"
+        android:elevation="3dp"
+        android:background="@drawable/requester_bg"
+        android:layout_below="@id/details_appbar">
+        <!--requester profile image view-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/requester_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_account"
+            android:layout_centerVertical="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"
+            android:contentDescription="@string/imageview_descr" />
+        <!--linear layout for the requester name and date-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/requester_img"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true">
+            <!--request name-->
+            <TextView
+                android:id="@+id/requester_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/requester_name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:fontFamily="@font/denk_one" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--request date-->
+                <TextView
+                    android:id="@+id/request_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_date_text"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/antic" />
+                <!--request date-->
+                <TextView
+                    android:id="@+id/request_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_date"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/antic" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--card view to display services choosen-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/details_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="0dp"
+        android:background="@color/white"
+        android:layout_below="@id/customer_details_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            tools:ignore="RtlSymmetry,UselessLeaf">
+
+            <RelativeLayout
+                android:id="@+id/specs_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/yellow"
+                android:elevation="3dp">
+
+                <TextView
+                    android:id="@+id/specs_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_specification_text"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:fontFamily="@font/denk_one"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="8dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/list_specs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_specification_text"
+                android:textStyle="normal"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:fontFamily="@font/denk_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:paddingStart="8dp"
+                android:layout_below="@id/specs_text_layout"/>
+            <!--RecyclerView to display choosen items-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/services_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/specs_text_layout"
+                android:layout_centerVertical="true"
+                android:paddingStart="8dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <!--card view to display request location-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/location_cv"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="3dp"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@id/details_cv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/request_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_address_text"
+                    android:textColor="@color/black"
+                    android:drawablePadding="5dp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/antic"
+                    app:drawableStartCompat="@drawable/ic_location" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/request_confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/yellow"
+        app:cornerRadius="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/show_interest_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/location_cv"/>
+</RelativeLayout>

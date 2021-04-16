@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/palce_bid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="place your bid"
+        android:fontFamily="@font/denk_one"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/child_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/palce_bid_text"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/icon_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:text="R"
+            android:textColor="@color/black"
+            android:background="@drawable/bid_button_style"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/place_bid_tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0.00"
+            tools:ignore="HardcodedText"
+            android:textColorHint="@color/gray"
+            app:boxStrokeColor="@color/gray"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/place_bid_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="place bid"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="5dp"
+        android:layout_below="@id/child_layout"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>
