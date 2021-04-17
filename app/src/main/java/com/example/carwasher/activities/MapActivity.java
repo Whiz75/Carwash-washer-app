@@ -17,7 +17,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -34,7 +33,6 @@ import androidx.core.content.ContextCompat;
 import com.cazaea.sweetalert.SweetAlertDialog;
 import com.example.carwasher.R;
 import com.example.carwasher.models.CompletedReqModel;
-import com.example.carwasher.models.InterestModel;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.LocationRequest;
@@ -54,14 +52,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.dialog.MaterialDialogs;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -71,6 +66,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+
+import dialogs.LocationFragmentDialog;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -90,6 +87,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private final int LOCATION_PERMISSION_CODE = 1;
     public static final int REQUEST_CHECK_CODE = 1;
+
+    LocationFragmentDialog dialog = new LocationFragmentDialog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -338,6 +337,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 //setCompleteRequest();
                 setupdialog();
+                /*dialog.show(getSupportFragmentManager().beginTransaction(), null);
+                dialog.setCancelable(true);*/
+
+
             }
         });
     }

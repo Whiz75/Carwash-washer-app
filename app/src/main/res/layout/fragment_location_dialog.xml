@@ -1,0 +1,44 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="dialogs.LocationFragmentDialog"
+    style="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="20dp"
+       android:orientation="vertical">
+
+       <!-- TODO: Update blank fragment layout -->
+       <TextView
+           android:id="@+id/text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Customer location" />
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Enter location"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/pop_dialog"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="20dp"
+           android:text="confirm"
+           android:textColor="@color/black"
+           style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+           />
+   </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -15,21 +15,15 @@ import com.cazaea.sweetalert.SweetAlertDialog;
 import com.example.carwasher.R;
 import com.example.carwasher.adapters.SpecsAdapter;
 import com.example.carwasher.models.CompletedReqModel;
-import com.example.carwasher.models.RequestModel;
 import com.example.carwasher.models.SpecsModel;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -45,6 +39,8 @@ public class RequestsDetails extends AppCompatActivity {
     private CircleImageView profile;
     private MaterialButton confirmButton;
 
+    //DialogFragmentH h = new DialogFragmentH();
+
     private DatabaseReference completedRef, servicesRef;
 
     private RecyclerView rv;
@@ -53,6 +49,9 @@ public class RequestsDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requests_details);
+
+        /*--- dialog dialog ---*/
+        //h.show(getSupportFragmentManager().beginTransaction(), null);
 
         completedRef = FirebaseDatabase.getInstance().getReference("CarWash").child("Completed");
         servicesRef = FirebaseDatabase.getInstance().getReference("CarWash").child("Requests").child("services");
