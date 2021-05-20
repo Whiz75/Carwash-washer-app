@@ -67,7 +67,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import dialogs.LocationFragmentDialog;
+import com.example.carwasher.dialogs.LocationFragmentDialog;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -87,8 +87,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private final int LOCATION_PERMISSION_CODE = 1;
     public static final int REQUEST_CHECK_CODE = 1;
-
-    LocationFragmentDialog dialog = new LocationFragmentDialog();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +119,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         toolbar = findViewById(R.id.mapToolbar);
         toLocation = findViewById(R.id.toDestination);
         fromLocation = findViewById(R.id.fromDestination);
-        cv = findViewById(R.id.bottomsheet_cv);
+        cv = findViewById(R.id.bottom_sheet_cv);
 
         completedButton = findViewById(R.id.completed_button);
     }
@@ -336,9 +334,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 //setCompleteRequest();
-                setupdialog();
-                /*dialog.show(getSupportFragmentManager().beginTransaction(), null);
-                dialog.setCancelable(true);*/
+                //setupdialog();
+                LocationFragmentDialog dialog = new LocationFragmentDialog();
+                dialog.show(getSupportFragmentManager().beginTransaction(), null);
+                dialog.setCancelable(true);
 
 
             }

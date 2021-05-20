@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="dialogs.LocationFragmentDialog"
-    style="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge">
+    tools:context="com.example.carwasher.dialogs.LocationFragmentDialog"
+    style="@style/FullScreenDialogStyle">
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -12,14 +12,26 @@
        android:padding="20dp"
        android:orientation="vertical">
 
+       <androidx.appcompat.widget.AppCompatImageButton
+           android:id="@+id/cancel_dialog_imageview"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_cancel"
+           android:background="@color/white"
+           android:backgroundTint="@color/white"
+           android:layout_gravity="end"/>
+
        <!-- TODO: Update blank fragment layout -->
        <TextView
            android:id="@+id/text"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="Customer location" />
+           android:text="Place request bid"
+           android:textAllCaps="true"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
        <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/input_bid_textLayout"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="Enter location"
@@ -32,13 +44,14 @@
 
        <com.google.android.material.button.MaterialButton
            android:id="@+id/pop_dialog"
-           android:layout_width="match_parent"
+           android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_marginTop="20dp"
            android:layout_marginBottom="20dp"
-           android:text="confirm"
+           android:text="@string/confirm_text"
+           android:textStyle="normal"
            android:textColor="@color/black"
-           style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+           android:layout_gravity="end"
            />
    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

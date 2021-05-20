@@ -24,7 +24,7 @@
         android:layout_below="@id/palce_bid_text"
         android:paddingBottom="8dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/icon_ib"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
@@ -54,12 +54,13 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/place_bid_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="place bid"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
         app:cornerRadius="5dp"
         android:layout_below="@id/child_layout"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>

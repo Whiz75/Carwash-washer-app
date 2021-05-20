@@ -1,20 +1,15 @@
 package com.example.carwasher.adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.carwasher.R;
-import com.example.carwasher.activities.RequestsDetails;
 import com.example.carwasher.models.RequestModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,37 +20,37 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static java.security.AccessController.getContext;
-
 public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.ViewHolder>
 {
 
-    private List<RequestModel> list;
-    private ButtonsClickListener buttonsClickListener;
+    private final List<RequestModel> list;
+    private final ButtonsClickListener buttonsClickListener;
 
     public RequestsAdapter(List<RequestModel> list, ButtonsClickListener buttonsClickListener) {
         this.list = list;
-        this.buttonsClickListener = (ButtonsClickListener) buttonsClickListener;
+        this.buttonsClickListener = buttonsClickListener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView txtusername, txttime;
-        private CircleImageView img_profile;
-        private Button btnAccept,btnreject;
+        private final TextView txt_username;
+        private final TextView txt_time;
+        private final CircleImageView img_profile;
+        private final Button btnAccept;
+        private final Button btnReject;
         View view;
 
         ViewHolder(@NonNull final View itemView) {
             super(itemView);
 
-            txtusername = itemView.findViewById(R.id.request_username);
-            txttime = itemView.findViewById(R.id.request_time);
+            txt_username = itemView.findViewById(R.id.request_username);
+            txt_time = itemView.findViewById(R.id.request_time);
             img_profile = itemView.findViewById(R.id.request_profile_image);
             btnAccept = itemView.findViewById(R.id.request_accept_button);
-            btnreject = itemView.findViewById(R.id.request_ignore_button);
+            btnReject = itemView.findViewById(R.id.request_ignore_button);
             view = itemView;
 
             btnAccept.setOnClickListener(this);
-            btnreject.setOnClickListener(this);
+            btnReject.setOnClickListener(this);
         }
 
         @Override
@@ -66,7 +61,7 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.ViewHo
                 buttonsClickListener.AccepterClick(pos);
             }
 
-            if (v.getId() == btnreject.getId())
+            if (v.getId() == btnReject.getId())
             {
                 int pos = getAdapterPosition();
                 buttonsClickListener.RejectClick(pos);
@@ -96,8 +91,8 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.ViewHo
     public void onBindViewHolder(@NonNull RequestsAdapter.ViewHolder holder, final int position) {
 
         RequestModel ld = list.get(position);
-        holder.txtusername.setText(ld.getRequester());
-        holder.txttime.setText(ld.getDate());
+        holder.txt_username.setText(ld.getRequester());
+        holder.txt_time.setText(ld.getDate());
         Picasso
                 .get()
                 .load(ld.getProfile())

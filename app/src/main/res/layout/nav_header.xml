@@ -9,7 +9,7 @@
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
     android:paddingTop="10dp"
-    android:background="@color/yellow">
+    android:background="@color/dodger_blue">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/drawer_profile_image"

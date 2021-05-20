@@ -4,8 +4,8 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!--Theme.MaterialComponents.Light.NoActionBar-->
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/yellow</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/dodger_blue</item>
+        <item name="colorPrimaryDark">@color/slate_gray</item>
         <item name="colorAccent">@color/slate_gray</item>
 
         <item name="android:statusBarColor">@color/white</item>
@@ -44,19 +44,26 @@
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 
-    <style name="FullScreenDialogStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
+    <style name="FullScreenDialogStyle" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowNoTitle">false</item>
         <item name="colorPrimaryDark">@color/yellow</item>
         <item name="colorPrimary">@color/colorPrimary</item>
+
         <!-- Set this to true if you want Full Screen without status bar -->
-        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFullscreen">true</item>
         <item name="android:windowSwipeToDismiss">true</item>
         <item name="android:windowIsFloating">true</item>
-        <!-- This is important! Don't forget to set window background -->
-        <!-- Additionally if you want animations when dialog opening
-        <item name="android:windowEnterAnimation">@anim/pushup_in</item>
-        <item name="android:windowExitAnimation">@anim/pushdown_out</item>-->
 
+        <!-- This is important! Don't forget to set window background -->
+         <!--Additionally if you want animations when dialog opening-->
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <!--set style for all TextInputLayput-->
+    <style name="EditTextStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorPrimary">@color/gray</item>
     </style>
 
 </resources>

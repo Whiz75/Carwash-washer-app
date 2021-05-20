@@ -45,9 +45,9 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/set_automatically_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginStart="10dp"
@@ -56,11 +56,12 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_below="@id/location_desc"
-            android:background="@drawable/button_bg"/>
+            android:layout_alignParentEnd="true"
+            />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/set_manually_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
@@ -69,7 +70,6 @@
             android:text="@string/set_manually_text"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_below="@id/set_automatically_button"
-            android:background="@drawable/button_bg"/>
+            android:layout_below="@id/location_desc" />
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
